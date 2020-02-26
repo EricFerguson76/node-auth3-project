@@ -8,6 +8,6 @@ router.get('/', (req, res) => {
       res.json(users);
     })
     .catch(() => {
-      res.status(403).json({ you: 'shall not pass!' });
+      res.status(401).json({ message: 'You shall not pass!' });
     });
 });
