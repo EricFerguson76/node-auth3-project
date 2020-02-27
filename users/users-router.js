@@ -11,3 +11,5 @@ router.get('/', (req, res) => {
       res.status(401).json({ message: 'You shall not pass!' });
     });
 });
+
+module.exports = router;

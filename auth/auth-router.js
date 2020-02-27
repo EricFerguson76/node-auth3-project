@@ -3,7 +3,7 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
 const Users = require('../users/users-model.js');
-const { jwtSecret } = require('../config/secrets');
+const { jwtSecret } = require('../config/secret');
 
 // for endpoints beginning with /api/auth
 router.post('/register', (req, res) => {
@@ -52,3 +52,5 @@ function generateToken(user) {
   };
   return jwt.sign(payload, secret, options);
 }
+
+module.exports = router;
